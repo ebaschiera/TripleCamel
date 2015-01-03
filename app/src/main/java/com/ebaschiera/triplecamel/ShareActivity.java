@@ -25,9 +25,6 @@ public class ShareActivity extends Activity {
         Intent intent = getIntent();
         Uri data = intent.getData();
 
-        Log.d("triple", intent.getType());
-        Log.d("triple", intent.getStringExtra(Intent.EXTRA_TEXT));
-
         String amazon_share_text = intent.getStringExtra(Intent.EXTRA_TEXT);
         if (amazon_share_text.matches(".*https://www.amazon.it/.*")) {
             Log.d("triple", "It matches!");
