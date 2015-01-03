@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TripleCamel</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Configurazione</string>
+    <string name="amazon_link_not_matching">Siamo spiacenti, ma non sono stati trovati link di Amazon. Triple Camel funziona solo se condividi un URL di Amazon.</string>
+    <string name="no_web_browser">Siamo spiacenti, ma non è stato trovata nessuna app adatta ad aprire un URL.</string>
+
+</resources>

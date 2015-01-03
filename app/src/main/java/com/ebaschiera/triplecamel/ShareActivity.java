@@ -41,7 +41,7 @@ public class ShareActivity extends Activity {
             if (amazon_share_url == "") {
                 //return a warning and stop the intent
                 Context context = getApplicationContext();
-                CharSequence text = "Sorry, no Amazon link found. Triple Camel will work only sharing an Amazon URL.";
+                String text = getResources().getString(R.string.amazon_link_not_matching);
                 int duration = Toast.LENGTH_LONG;
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
@@ -64,7 +64,7 @@ public class ShareActivity extends Activity {
                 finish();
             } else {
                 Context context = getApplicationContext();
-                CharSequence text = "Sorry, no suitable app found to open an URL.";
+                String text = getResources().getString(R.string.no_web_browser);
                 int duration = Toast.LENGTH_LONG;
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
@@ -73,7 +73,7 @@ public class ShareActivity extends Activity {
         } else {
             //return a warning and stop the intent
             Context context = getApplicationContext();
-            CharSequence text = "Sorry, no Amazon link found. Triple Camel will work only sharing an Amazon URL.";
+            String text = getResources().getString(R.string.amazon_link_not_matching);
             int duration = Toast.LENGTH_LONG;
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();

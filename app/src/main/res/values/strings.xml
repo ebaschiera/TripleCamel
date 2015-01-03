@@ -4,5 +4,7 @@
     <string name="app_name">TripleCamel</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="amazon_link_not_matching">Sorry, no Amazon link found. Triple Camel will work only sharing an Amazon URL.</string>
+    <string name="no_web_browser">Sorry, no suitable app found to open an URL.</string>
 
 </resources>
