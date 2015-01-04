@@ -8,6 +8,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.text.Html;
+import android.text.Spanned;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -30,7 +33,11 @@ public class MainActivity extends ActionBarActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
+
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            TextView about_text = (TextView) rootView.findViewById(R.id.innerTextViewAbout);
+            Spanned sp = Html.fromHtml(getString(R.string.about_this_app));
+            about_text.setText(sp);
             return rootView;
         }
     }

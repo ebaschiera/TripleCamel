@@ -5,6 +5,10 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Configurazione</string>
     <string name="amazon_link_not_matching">Siamo spiacenti, ma non sono stati trovati link di Amazon. Triple Camel funziona solo se condividi un URL di Amazon.</string>
-    <string name="no_web_browser">Siamo spiacenti, ma non è stato trovata nessuna app adatta ad aprire un URL.</string>
+    <string name="no_web_browser">Siamo spiacenti, ma non è stata trovata nessuna app adatta ad aprire un URL.</string>
+    <string name="about_this_app"><![CDATA[<p><big>Ciao! Questa è la pagina di informazioni su Triple Camel.</big></p>
+    <p>Questa app funziona quando condividi un prodotto dall\'app di Amazon e selezioni Triple Camel dall\'elenco delle app con cui condividere il prodotto.</p>
+    <p>Se lanci Triple Camel dal menu delle app, ti comparirà questa pagina di informazioni e nient\'altro.</p>
+    <p><small>Icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></small></p>]]></string>
 
 </resources>

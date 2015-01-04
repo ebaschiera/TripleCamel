@@ -2,8 +2,16 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" tools:context="com.ebaschiera.triplecamel.MainFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_gravity="center|top" >
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/about_this_app"
+            android:id="@+id/innerTextViewAbout" />
+
+    </ScrollView>
 
 </FrameLayout>

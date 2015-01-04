@@ -5,24 +5,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-<!--
-    <fragment android:name="com.ebaschiera.triplecamel.MainFragment"
-        android:id="@+id/headlines_fragment"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        tools:layout="@layout/fragment_main"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
--->
-
     <fragment android:name="com.ebaschiera.triplecamel.MainActivity$MainFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/textView" />
-
+        android:layout_height="match_parent" />
+<!--
     <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView" />
+        android:id="@+id/textView" />-->
 
 </RelativeLayout>
