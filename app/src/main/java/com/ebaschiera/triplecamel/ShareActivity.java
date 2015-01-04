@@ -28,10 +28,10 @@ public class ShareActivity extends Activity {
         Uri data = intent.getData();
 
         String amazon_share_text = intent.getStringExtra(Intent.EXTRA_TEXT);
-        Log.d("triple", amazon_share_text);
+        //Log.d("triple", amazon_share_text);
         //if (amazon_share_text.matches(".*https://www\\.amazon\\.(?:[a-zA-Z]{2}|[a-zA-Z]{2}\\.[a-zA-Z]{2}|com)/.*")) {
         if (amazon_share_text.matches(".*http[s]?://www\\.amazon\\.(?:com|ca|cn|de|es|fr|in|it|co\\.jp|co\\.uk)/.*")) {
-            Log.d("triple", "It matches!");
+            //Log.d("triple", "It matches!");
             Pattern p = Pattern.compile(".*(http[s]?://www\\.amazon\\.(?:com|ca|cn|de|es|fr|in|it|co\\.jp|co\\.uk|com)/.*)");
             Matcher m = p.matcher(amazon_share_text);
             String amazon_share_url = "";
@@ -49,8 +49,8 @@ public class ShareActivity extends Activity {
             }
             amazon_share_url = Uri.encode(amazon_share_url);
             Uri camel_search_uri = Uri.parse("http://camelcamelcamel.com/search?sq=" + amazon_share_url);
-            Log.d("triple", amazon_share_url);
-            Log.d("new_intent", camel_search_uri.toString());
+            //Log.d("triple", amazon_share_url);
+            //Log.d("new_intent", camel_search_uri.toString());
             Intent webIntent = new Intent(Intent.ACTION_VIEW, camel_search_uri);
 
             // Verify it resolves
