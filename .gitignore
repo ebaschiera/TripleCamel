@@ -6,3 +6,4 @@
 *.iml
 bin/
 gen/
+.gradle
