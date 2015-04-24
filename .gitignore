@@ -1,8 +1,8 @@
-*.gradle
 /local.properties
 /.idea/*
 .DS_Store
 /build
-/app/*.apk
-/gradle*
-TripleCamel.iml
+*.apk
+*.iml
+bin/
+gen/
