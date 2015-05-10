@@ -11,12 +11,23 @@ import android.widget.TextView;
 import android.text.Html;
 import android.text.Spanned;
 
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+
 
 public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Get tracker.
+        Tracker t = ((TripleCamelApplication) getApplication()).getTracker(
+                TripleCamelApplication.TrackerName.APP_TRACKER);
+        // Build and send an Event.
+        t.send(new HitBuilders.EventBuilder()
+                .setCategory("default")
+                .setAction("aboutpage_display")
+                .build());
         setContentView(R.layout.activity_main);
     }
 

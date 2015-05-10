@@ -8,6 +8,10 @@ import android.net.Uri;
 import android.util.Log;
 import android.content.pm.*;
 import android.widget.Toast;
+
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+
 import java.util.regex.*;
 import java.util.List;
 
@@ -20,6 +24,15 @@ public class ShareActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Get tracker.
+        Tracker t = ((TripleCamelApplication) getApplication()).getTracker(
+                TripleCamelApplication.TrackerName.APP_TRACKER);
+        // Build and send an Event.
+        t.send(new HitBuilders.EventBuilder()
+                .setCategory("sharing")
+                .setAction("share_start")
+                .build());
 
         // Get the intent that started this activity
         Intent intent = getIntent();
@@ -57,6 +70,10 @@ public class ShareActivity extends Activity {
 
 // Start an activity if it's safe
             if (isIntentSafe) {
+                t.send(new HitBuilders.EventBuilder()
+                        .setCategory("sharing")
+                        .setAction("share_success")
+                        .build());
                 startActivity(webIntent);
                 finish();
             } else {
@@ -69,6 +86,10 @@ public class ShareActivity extends Activity {
             }
         } else {
             //return a warning and stop the intent
+            t.send(new HitBuilders.EventBuilder()
+                    .setCategory("sharing")
+                    .setAction("share_fail")
+                    .build());
             Context context = getApplicationContext();
             String text = getResources().getString(R.string.amazon_link_not_matching);
             int duration = Toast.LENGTH_LONG;
