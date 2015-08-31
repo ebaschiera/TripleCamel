@@ -2,14 +2,13 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion "21.1.2"
-
+    buildToolsVersion '21.1.2'
     defaultConfig {
         applicationId "com.ebaschiera.triplecamel"
         minSdkVersion 10
         targetSdkVersion 21
-        versionCode 4
-        versionName "1.0.3"
+        versionCode 5
+        versionName "1.0.4"
     }
     buildTypes {
         release {
@@ -23,5 +22,11 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile 'com.android.support:support-v4:21.0.3'
-    compile files('libs/PiwikAndroidSdk.jar')
+    compile 'org.piwik.sdk:piwik-sdk:0.0.2'
+}
+
+repositories {
+    maven {
+        url  "http://dl.bintray.com/darken/maven"
+    }
 }
