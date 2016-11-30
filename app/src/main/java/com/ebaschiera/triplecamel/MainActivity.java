@@ -11,15 +11,21 @@ import android.widget.TextView;
 import android.text.Html;
 import android.text.Spanned;
 
+import org.piwik.sdk.TrackHelper;
+import org.piwik.sdk.Tracker;
+
 
 public class MainActivity extends ActionBarActivity {
+
+    private Tracker getTracker() {
+        return ((TripleCamelApp) getApplication()).getTracker();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ((TripleCamelApp) getApplication()).getTracker()
-                .trackScreenView("/info_screen", "Info screen");
+        TrackHelper.track().screen("/info_screen").title("Info screen").with(getTracker());
     }
 
     /**
