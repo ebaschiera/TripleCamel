@@ -4,12 +4,12 @@
     <string name="app_name">TripleCamel</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Configurazione</string>
-    <string name="amazon_link_not_matching">Siamo spiacenti, ma non sono stati trovati link di Amazon. Triple Camel funziona solo se condividi un URL di Amazon.</string>
+    <string name="amazon_link_not_matching">Siamo spiacenti, ma non sono stati trovati link di Amazon. TripleCamel funziona solo se condividi un URL di Amazon.</string>
     <string name="no_web_browser">Siamo spiacenti, ma non è stata trovata nessuna app adatta ad aprire un URL.</string>
-    <string name="about_this_app"><![CDATA[<p><big>Ciao! Questa è la pagina di informazioni su Triple Camel.</big></p>
+    <string name="about_this_app"><![CDATA[<p><big>Ciao! Questa è la pagina di informazioni su TripleCamel.</big></p>
     <p>Controlla in un attimo l\'andamento del prezzo di un prodotto su Amazon grazie a CamelCamelCamel.</p>
-    <p>Questa app funziona così: visualizza un prodotto nell'app di Amazon, premi sul bottone Condividi e seleziona Triple Camel dall\'elenco delle app con cui condividere il prodotto. Verrai portato su CamelCamelCamel direttamente nella scheda di quel prodotto. Ecco fatto!</p>
-    <p>Se lanci Triple Camel dal menu delle app, ti comparirà questa pagina di informazioni e nient\'altro.</p>
+    <p>Questa app funziona così: visualizza un prodotto nell\'app di Amazon, premi sul bottone Condividi e seleziona TripleCamel dall\'elenco delle app con cui condividere il prodotto. Verrai portato su CamelCamelCamel direttamente nella scheda di quel prodotto. Ecco fatto!</p>
+    <p>Se lanci TripleCamel dal menu delle app, ti comparirà questa pagina di informazioni e nient\'altro.</p>
     <p>Questa app non è affiliata a CamelCamelCamel. Per ulteriori informazioni, visita il loro <a href="http://it.camelcamelcamel.com/">sito</a>.</p>
     <p>L\'autore di questa app è Ermanno Baschiera (ebaschiera@gmail.com). Questo software è rilasciato con licenza GPLv3.</p>
     <p>TripleCamel website: <a href="https://github.com/ebaschiera/TripleCamel">https://github.com/ebaschiera/TripleCamel</a></p>

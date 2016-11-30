@@ -8,7 +8,7 @@
     <string name="no_web_browser">Sorry, no suitable app found to open an URL.</string>
     <string name="about_this_app"><![CDATA[<p><big>Hi! This is the information page about TripleCamel.</big></p>
     <p>Check the price history of an Amazon product on CamelCamelCamel in no time!</p>
-    <p>This app works like this: display a product in the Amazon app, push the Share button and select TripleCamel as the sharing app from the list. You will be redirected to CamelCamelCamel at the page of that product. That's it!</p>
+    <p>This app works like this: display a product in the Amazon app, push the Share button and select TripleCamel as the sharing app from the list. You will be redirected to CamelCamelCamel at the page of that product. That\'s it!</p>
     <p>If you run this app from the app menu, you will see this information page and nothing more will happen.</p>
     <p>This app is not affiliated with CamelCamelCamel. For more information, visit their <a href="http://camelcamelcamel.com/">website</a>.</p>
     <p>This app has been developed by Ermanno Baschiera (ebaschiera@gmail.com). This software is GPLv3.</p>
