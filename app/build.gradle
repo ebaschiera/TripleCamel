@@ -24,9 +24,3 @@ dependencies {
     compile 'com.android.support:support-v4:21.0.3'
     compile 'org.piwik.sdk:piwik-sdk:1.0.2'
 }
-
-repositories {
-    maven {
-        url  "http://dl.bintray.com/darken/maven"
-    }
-}
