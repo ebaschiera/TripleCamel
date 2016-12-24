@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TripleCamel</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">設定</string>
+    <string name="amazon_link_not_matching">申し訳ありません。Amazon のリンクは見つかりませんでした。 TripleCamel は Amazon URL の共有のみを処理します。</string>
+    <string name="no_web_browser">申し訳ありません。URL を開くのに適したアプリが見つかりませんでした。</string>
+    <string name="about_this_app"><![CDATA[<p><big>ようこそ! これは TripleCamel に関する情報ページです。</big></p>
+    <p>CamelCamelCamel で Amazon 商品の価格履歴をすぐに確認しましょう!</p>
+    <p>このアプリは次のように動作します: Amazon アプリに商品を表示し、共有ボタンを押して、リストから共有アプリとして TripleCamel を選択します。 その商品のページで CamelCamelCamel にリダイレクトされます。 以上です!</p>
+    <p>このアプリをアプリメニューから実行した場合、この情報ページが表示されて、それ以上のことは起こりません。</p>
+    <p>このアプリは CamelCamelCamel と提携しているわけではありません。 詳細については、<a href="http://camelcamelcamel.com/">Webサイト</a> をご覧ください。</p>
+    <p>このアプリは Ermanno Baschiera (ebaschiera@gmail.com) によって開発されました。 このソフトウェアは GPLv3 です。</p>
+    <p>TripleCamel Webサイト: <a href="https://github.com/ebaschiera/TripleCamel">https://github.com/ebaschiera/TripleCamel</a></p>
+    <p><small>アイコンは <a href="http://www.freepik.com" title="Freepik">Freepik</a> によって <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> から <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a> ライセンスに基づいて作成しました</small></p>]]></string>
+
+</resources>
