@@ -7,6 +7,6 @@ This app is not affiliated with CamelCamelCamel. For more information, visit the
 
 This app is developed by Ermanno Baschiera (ebaschiera@gmail.com). This software is GPLv3.
 
-<a href="https://f-droid.org/repository/browse/?fdfilter=triplecamel&fdid=com.ebaschiera.triplecamel" target="_blank">
-  <img src="https://f-droid.org/badge/get-it-on.png" height="90"/>
+<a href="https://f-droid.org/app/com.ebaschiera.triplecamel" target="_blank">
+  <img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="90"/>
 </a>
