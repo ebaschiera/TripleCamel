@@ -8,9 +8,6 @@ import android.net.Uri;
 import android.content.pm.*;
 import android.widget.Toast;
 
-import org.piwik.sdk.TrackHelper;
-import org.piwik.sdk.Tracker;
-
 import java.util.regex.*;
 import java.util.List;
 
@@ -20,15 +17,9 @@ import java.util.List;
  */
 public class ShareActivity extends Activity {
 
-    private Tracker getTracker() {
-        return ((TripleCamelApp) getApplication()).getTracker();
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        TrackHelper.track().screen("/share").title("Share intent").with(getTracker());
 
         // Get the intent that started this activity
         Intent intent = getIntent();
@@ -46,7 +37,6 @@ public class ShareActivity extends Activity {
             }
             if (amazon_share_url == "") {
                 //return a warning and stop the intent
-                TrackHelper.track().event("share", "failed").name("label").value(1f).with(getTracker());
                 Context context = getApplicationContext();
                 String text = getResources().getString(R.string.amazon_link_not_matching);
                 int duration = Toast.LENGTH_LONG;
@@ -67,11 +57,9 @@ public class ShareActivity extends Activity {
 
             // Start an activity if it's safe
             if (isIntentSafe) {
-                TrackHelper.track().event("share", "successful").name("label").value(1f).with(getTracker());
                 startActivity(webIntent);
                 finish();
             } else {
-                TrackHelper.track().event("share", "failed").name("label").value(1f).with(getTracker());
                 Context context = getApplicationContext();
                 String text = getResources().getString(R.string.no_web_browser);
                 int duration = Toast.LENGTH_LONG;
@@ -81,7 +69,6 @@ public class ShareActivity extends Activity {
             }
         } else {
             //return a warning and stop the intent
-            TrackHelper.track().event("share", "failed").name("label").value(1f).with(getTracker());
             Context context = getApplicationContext();
             String text = getResources().getString(R.string.amazon_link_not_matching);
             int duration = Toast.LENGTH_LONG;

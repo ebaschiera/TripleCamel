@@ -1,20 +1,11 @@
 package com.ebaschiera.triplecamel;
 
-import org.piwik.sdk.PiwikApplication;
+import android.app.Application;
 
 /**
  * Created by ebaschiera on 19/07/15.
  */
-public class TripleCamelApp extends PiwikApplication {
+public class TripleCamelApp extends Application {
 
-    @Override
-    public String getTrackerUrl() {
-        return "http://ebaschiera.com/piwik/piwik.php";
-    }
-
-    @Override
-    public Integer getSiteId() {
-        return 1;
-    }
 
 }
