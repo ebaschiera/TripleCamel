@@ -7,6 +7,8 @@ This app is not affiliated with CamelCamelCamel. For more information, visit the
 
 This app is developed by Ermanno Baschiera (ebaschiera@gmail.com). This software is GPLv3.
 
+Since version 1.0.8 no user data will be tracked at all. Before 1.0.8 I tracked app usage with Piwik analytics, without collecting personal data.
+
 <a href="https://f-droid.org/app/com.ebaschiera.triplecamel" target="_blank">
   <img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="90"/>
 </a>
