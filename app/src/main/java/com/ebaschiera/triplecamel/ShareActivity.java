@@ -27,15 +27,17 @@ public class ShareActivity extends Activity {
 
         String amazon_share_text = intent.getStringExtra(Intent.EXTRA_TEXT);
         //Log.d("triple", amazon_share_text);
+        assert amazon_share_text != null;
         if (amazon_share_text.matches(".*https://www\\.amazon\\.(?:com|ca|cn|de|es|fr|in|it|co\\.jp|co\\.uk)/.*")) {
             //Log.d("triple", "It matches!");
-            Pattern p = Pattern.compile(".*(https://www\\.amazon\\.(?:com|ca|cn|de|es|fr|in|it|co\\.jp|co\\.uk|com)/.*)");
+            Pattern p = Pattern.compile(".*(https://www\\.amazon\\.(?:com|ca|cn|de|es|fr|in|it|co\\.jp|co\\.uk)/.*)");
             Matcher m = p.matcher(amazon_share_text);
             String amazon_share_url = "";
             while (m.find()) { // Find each match in turn; String can't do this.
                 amazon_share_url = m.group(1); // Access a submatch group; String can't do this.
             }
-            if (amazon_share_url == "") {
+            assert amazon_share_url != null;
+            if (amazon_share_url.equals("")) {
                 //return a warning and stop the intent
                 Context context = getApplicationContext();
                 String text = getResources().getString(R.string.amazon_link_not_matching);
