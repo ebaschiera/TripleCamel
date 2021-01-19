@@ -52,23 +52,7 @@ public class ShareActivity extends Activity {
             //Log.d("new_intent", camel_search_uri.toString());
             Intent webIntent = new Intent(Intent.ACTION_VIEW, camel_search_uri);
 
-            // Verify it resolves
-            PackageManager packageManager = getPackageManager();
-            List<ResolveInfo> activities = packageManager.queryIntentActivities(webIntent, 0);
-            boolean isIntentSafe = activities.size() > 0;
-
-            // Start an activity if it's safe
-            if (isIntentSafe) {
-                startActivity(webIntent);
-                finish();
-            } else {
-                Context context = getApplicationContext();
-                String text = getResources().getString(R.string.no_web_browser);
-                int duration = Toast.LENGTH_LONG;
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
-                finish();
-            }
+            startActivity(webIntent);
         } else {
             //return a warning and stop the intent
             Context context = getApplicationContext();
