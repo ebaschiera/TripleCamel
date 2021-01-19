@@ -1,6 +1,7 @@
 package com.ebaschiera.triplecamel;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.os.Bundle;
 import android.content.Intent;
 import android.content.Context;
@@ -52,7 +53,16 @@ public class ShareActivity extends Activity {
             //Log.d("new_intent", camel_search_uri.toString());
             Intent webIntent = new Intent(Intent.ACTION_VIEW, camel_search_uri);
 
-            startActivity(webIntent);
+            try {
+                startActivity(webIntent);
+            } catch (ActivityNotFoundException e) {
+                Context context = getApplicationContext();
+                String text = getResources().getString(R.string.no_web_browser);
+                int duration = Toast.LENGTH_LONG;
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+                finish();
+            }
         } else {
             //return a warning and stop the intent
             Context context = getApplicationContext();
