@@ -18,6 +18,7 @@ import java.util.List;
  * Tested strings:
  * Grin&Bear Herren Hoodie Slim fit Kapuzenpullover Kapuzenjacke mit gestempeltem Design Logo GEC540 https://amzn.eu/d/2Euir6I
  * Acer Chromebook 314 CB314-1H-P2EM Notebook, Pc Portatile con Processore Intel Pentium Silver N5030, Ram 8 GB DDR4, eMMC 64 GB, Display 14" Full HD LED LCD, Scheda Grafica Intel UHD, Chrome OS, Silver https://amzn.eu/d/1679v13
+ * All-new Echo Buds (2nd Gen) | Wireless earbuds with active noise cancellation and Alexa | Black https://amzn.asia/d/cHyEGI8
  */
 public class ShareActivity extends Activity {
 
@@ -32,9 +33,9 @@ public class ShareActivity extends Activity {
         String amazon_share_text = intent.getStringExtra(Intent.EXTRA_TEXT);
         //Log.d("triple", amazon_share_text);
         assert amazon_share_text != null;
-        if (amazon_share_text.matches(".*https://(?:www\\.|smile\\.)?(?:amazon|amzn)\\.(?:com|ae|ca|cn|de|es|eu|fr|in|it|nl|sa|sg|co\\.jp|co\\.uk|com\\.au|com\\.br|com\\.mx|com\\.tr)/.*")) {
+        if (amazon_share_text.matches(".*https://(?:www\\.|smile\\.)?(?:amazon|amzn)\\.(?:com|ae|asia|ca|cn|de|es|eu|fr|in|it|nl|sa|sg|co\\.jp|co\\.uk|com\\.au|com\\.br|com\\.mx|com\\.tr)/.*")) {
             //Log.d("triple", "It matches!");
-            Pattern p = Pattern.compile(".*(https://(?:www\\.|smile\\.)?(?:amazon|amzn)\\.(?:com|ae|ca|cn|de|es|eu|fr|in|it|nl|sa|sg|co\\.jp|co\\.uk|com\\.au|com\\.br|com\\.mx|com\\.tr)/.*)");
+            Pattern p = Pattern.compile(".*(https://(?:www\\.|smile\\.)?(?:amazon|amzn)\\.(?:com|ae|asia|ca|cn|de|es|eu|fr|in|it|nl|sa|sg|co\\.jp|co\\.uk|com\\.au|com\\.br|com\\.mx|com\\.tr)/.*)");
             Matcher m = p.matcher(amazon_share_text);
             String amazon_share_url = "";
             while (m.find()) { // Find each match in turn; String can't do this.
