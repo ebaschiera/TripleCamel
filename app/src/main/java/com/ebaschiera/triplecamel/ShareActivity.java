@@ -2,15 +2,14 @@ package com.ebaschiera.triplecamel;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
-import android.os.Bundle;
-import android.content.Intent;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
-import android.content.pm.*;
+import android.os.Bundle;
 import android.widget.Toast;
 
-import java.util.regex.*;
-import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 /**
@@ -19,6 +18,8 @@ import java.util.List;
  * Grin&Bear Herren Hoodie Slim fit Kapuzenpullover Kapuzenjacke mit gestempeltem Design Logo GEC540 https://amzn.eu/d/2Euir6I
  * Acer Chromebook 314 CB314-1H-P2EM Notebook, Pc Portatile con Processore Intel Pentium Silver N5030, Ram 8 GB DDR4, eMMC 64 GB, Display 14" Full HD LED LCD, Scheda Grafica Intel UHD, Chrome OS, Silver https://amzn.eu/d/1679v13
  * All-new Echo Buds (2nd Gen) | Wireless earbuds with active noise cancellation and Alexa | Black https://amzn.asia/d/cHyEGI8
+ * Jim Shore Heartwood Creek Mini Stone Resin Camel Figurines Set of Two, 4.25” https://a.co/d/jhY0OXA
+ * Amazon.com https://www.amazon.com/dp/B09SYZY2TM?ref_=cm_sw_r_apann_ts_YTM8PC5MW52BBJVYS2TD
  */
 public class ShareActivity extends Activity {
 
@@ -33,13 +34,13 @@ public class ShareActivity extends Activity {
         String amazon_share_text = intent.getStringExtra(Intent.EXTRA_TEXT);
         //Log.d("triple", amazon_share_text);
         assert amazon_share_text != null;
-        if (amazon_share_text.matches(".*https://(?:www\\.|smile\\.)?(?:amazon|amzn)\\.(?:com|ae|asia|ca|cn|de|es|eu|fr|in|it|nl|sa|sg|co\\.jp|co\\.uk|com\\.au|com\\.br|com\\.mx|com\\.tr)/.*")) {
+        if (amazon_share_text.matches(".*(?:https://(?:www\\.|smile\\.)?(?:amazon|amzn)\\.(?:com|ae|asia|ca|cn|de|es|eu|fr|in|it|nl|sa|sg|co\\.jp|co\\.uk|com\\.au|com\\.br|com\\.mx|com\\.tr)|(?:https://a\\.co))/.*")) {
             //Log.d("triple", "It matches!");
-            Pattern p = Pattern.compile(".*(https://(?:www\\.|smile\\.)?(?:amazon|amzn)\\.(?:com|ae|asia|ca|cn|de|es|eu|fr|in|it|nl|sa|sg|co\\.jp|co\\.uk|com\\.au|com\\.br|com\\.mx|com\\.tr)/.*)");
+            Pattern p = Pattern.compile("(https://(?:www\\.|smile\\.)?(?:amazon|amzn)\\.(?:com|ae|asia|ca|cn|de|es|eu|fr|in|it|nl|sa|sg|co\\.jp|co\\.uk|com\\.au|com\\.br|com\\.mx|com\\.tr)/.*)|(https://a\\.co/.*)");
             Matcher m = p.matcher(amazon_share_text);
-            String amazon_share_url = "";
+            String amazon_share_url = null;
             while (m.find()) { // Find each match in turn; String can't do this.
-                amazon_share_url = m.group(1); // Access a submatch group; String can't do this.
+                amazon_share_url = m.group(); // Access a submatch group; String can't do this.
             }
             assert amazon_share_url != null;
             if (amazon_share_url.equals("")) {
